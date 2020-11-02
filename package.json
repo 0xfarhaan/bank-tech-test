@@ -1,0 +1,14 @@
+{
+  "name": "bank-test-test-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bank.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.2"
+  }
+}
