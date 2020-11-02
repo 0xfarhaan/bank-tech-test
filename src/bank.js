@@ -11,5 +11,9 @@ class Bank {
   deposit(amount) {
     this.balance += amount;
   }
+
+  withdraw(amount) {
+    this.balance -= amount;
+  }
 }
 module.exports = Bank;
