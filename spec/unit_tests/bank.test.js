@@ -1,4 +1,4 @@
-let Bank = require("../../bank");
+let Bank = require("../../src/bank");
 let bank;
 
 beforeEach(() => {

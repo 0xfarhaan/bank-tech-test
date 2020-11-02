@@ -2,7 +2,7 @@
   "name": "bank-test-test-jest",
   "version": "1.0.0",
   "description": "",
-  "main": "bank.js",
+  "main": "src/bank.js",
   "scripts": {
     "test": "jest"
   },
