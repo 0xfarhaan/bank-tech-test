@@ -7,5 +7,9 @@ class Bank {
   printStatement() {
     return this._header;
   }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
 }
 module.exports = Bank;

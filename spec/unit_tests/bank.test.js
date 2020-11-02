@@ -14,3 +14,8 @@ test("expect an account with no transactions to return a empty statement", () =>
     "date || credit || debit || balance"
   );
 });
+
+test("user makes a deposit into their account", () => {
+  bank.deposit(100);
+  expect(bank.balance).toBe(100);
+});
