@@ -10,7 +10,9 @@ test("expects account balance to start at zero", () => {
 });
 
 test("expect an account with no transactions to return a empty statement", () => {
-  expect(bank.printStatement()).toStrictEqual(
+  console.log = jest.fn();
+  bank.printStatement();
+  expect(console.log).toHaveBeenCalledWith(
     "date || credit || debit || balance"
   );
 });

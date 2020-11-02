@@ -5,7 +5,7 @@ class Bank {
   }
 
   printStatement() {
-    return this._header;
+    console.log(this._header);
   }
 
   deposit(amount) {
