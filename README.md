@@ -2,6 +2,40 @@
 
 [![Build Status](https://travis-ci.com/farhaan-ali/bank-tech-test.svg?branch=main)](https://travis-ci.com/farhaan-ali/bank-tech-test)
 
+## How to Run
+1. Clone this repo
+2. Navigate to the repo in your terminal
+3. Run the application and interact wth the bank
+```bash
+$ npm install
+$ node
+```
+```js
+//require and initiate bank instance
+let Bank = require('./src/bank.js');
+let bank = new Bank();
+//deposit money into the bank
+bank.deposit(INSERT_AN_AMOUNT)
+//withdraw money from the bank
+bank.withdraw(INSERT_AN_AMOUNT)
+//print your statement from the bank
+bank.printStatement()
+```
+## Running Tests
+Navigate to the repo in your terminal
+```bash
+$ npm test
+```
+## Technologies
+
+| Area                 | Technology                 |
+| -------------------- | -------------------------- |
+| Language           | Javascript|
+| CI/CD                | Travis                     |
+| Testing and Coverage | Jest |
+| Linting | Prettier |
+
+
 ## Specification
 
 ### Requirements
@@ -26,18 +60,18 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-### Planning:
-#### functionality:
+## Planning:
+### functionality:
 * We need to store the date, credit, debit and balance for an account for a given day
 * Bank statement needs to be printed with a certain format as outlined above
 * User should be able to make a deposit - this stores the amount credited to the account and the date and a snapshot of the current balance
 * User should be able to make a debit - this withdraws an amount from the account and the date and current snapshot of balance is stored. 
 
-What is the interface like?
+#### What is the interface like?
 
 * User interacts with just the deposit , withdraw and getStatement functions in the class 
 
-What can the data structure be to store the information?
+#### What can the data structure be to store the information?
 
 * Could use a hash where the key is the date, and the value is another hash storing any credits or debits
 the downside to this approach is a hash doesn't always return in the order it was created due to how it is saved in memory.
