@@ -4,6 +4,14 @@ class Account {
     this.transactions = [];
   }
 
+  returnTransactions() {
+    return this.transactions;
+  }
+
+  returnBalance() {
+    return this.balance;
+  }
+
   transaction(amount) {
     this.balance += amount;
     if (amount > 0) {

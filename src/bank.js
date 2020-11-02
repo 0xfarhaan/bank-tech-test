@@ -1,19 +1,27 @@
+let Account = require("./account.js");
+let Printer = require("./printer.js");
+
 class Bank {
-  constructor() {
-    this.balance = 0;
+  constructor(account = new Account(), printer = new Printer()) {
     this._header = "date || credit || debit || balance\n";
+    this.printer = printer;
+    this.account = account;
   }
 
   printStatement() {
-    console.log(this._header);
+    this.printer.print(this.account.returnTransactions());
   }
 
   deposit(amount) {
-    this.balance += amount;
+    this.account.transaction(amount);
   }
 
   withdraw(amount) {
-    this.balance -= amount;
+    this.account.transaction(-amount);
+  }
+
+  getBalance() {
+    return this.account.returnBalance();
   }
 }
 module.exports = Bank;
