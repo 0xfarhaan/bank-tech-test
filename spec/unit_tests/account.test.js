@@ -12,3 +12,11 @@ test("records a credit transaction", () => {
     balance: 100,
   });
 });
+
+test("records a debit transaction", () => {
+  expect(account.transaction(-100)).toStrictEqual({
+    date: "02/11/2020",
+    debit: 100,
+    balance: -100,
+  });
+});

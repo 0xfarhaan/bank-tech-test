@@ -12,6 +12,14 @@ class Account {
         credit: amount,
       };
     }
+
+    if (amount < 0) {
+      return {
+        date: this._currentDate(),
+        balance: this.balance,
+        debit: Math.abs(amount),
+      };
+    }
   }
 
   _currentDate() {
