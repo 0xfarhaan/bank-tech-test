@@ -3,7 +3,6 @@ let Printer = require("./printer.js");
 
 class Bank {
   constructor(account = new Account(), printer = new Printer()) {
-    this._header = "date || credit || debit || balance\n";
     this.printer = printer;
     this.account = account;
   }
@@ -20,7 +19,7 @@ class Bank {
     this.account.transaction(-amount);
   }
 
-  getBalance() {
+  _getBalance() {
     return this.account.returnBalance();
   }
 }
