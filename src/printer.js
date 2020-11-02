@@ -8,23 +8,27 @@ class Printer {
     if (transactions.length == 0) {
       console.log(this._header);
     } else {
-      let toPrint = this._header;
-      for (let i = transactions.length - 1; i >= 0; i--) {
-        const element = transactions[i];
-        if (element.credit) {
-          toPrint += element.date + " " + this._divider;
-          toPrint += " " + element.credit + " " + this._divider;
-          toPrint += " " + this._divider;
-          toPrint += " " + element.balance + "\n";
-        } else {
-          toPrint += element.date + " " + this._divider;
-          toPrint += " " + this._divider;
-          toPrint += " " + element.debit + " " + this._divider;
-          toPrint += " " + element.balance + "\n";
-        }
-      }
-      console.log(toPrint);
+      console.log(this._addTransactions(transactions));
     }
+  }
+
+  _addTransactions(transactions) {
+    let toPrint = this._header;
+    for (let i = transactions.length - 1; i >= 0; i--) {
+      const element = transactions[i];
+      if (element.credit) {
+        toPrint += element.date + " " + this._divider;
+        toPrint += " " + element.credit + " " + this._divider;
+        toPrint += " " + this._divider;
+        toPrint += " " + element.balance + "\n";
+      } else {
+        toPrint += element.date + " " + this._divider;
+        toPrint += " " + this._divider;
+        toPrint += " " + element.debit + " " + this._divider;
+        toPrint += " " + element.balance + "\n";
+      }
+    }
+    return toPrint;
   }
 }
 
