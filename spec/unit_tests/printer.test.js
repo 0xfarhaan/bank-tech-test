@@ -41,7 +41,7 @@ test("Prints a statement with one debit transaction", () => {
   );
 });
 
-test("Prints a statement with one credit and one debit transaction", () => {
+test("Prints a statement with one credit and one debit transaction and the right order", () => {
   console.log = jest.fn();
   printer.print([
     {
@@ -56,6 +56,6 @@ test("Prints a statement with one credit and one debit transaction", () => {
     },
   ]);
   expect(console.log).toHaveBeenCalledWith(
-    "date || credit || debit || balance\n02/11/2020 || 10.00 || || 10.00\n02/11/2020 || || 12.00 || 10.00\n"
+    "date || credit || debit || balance\n02/11/2020 || || 12.00 || 10.00\n02/11/2020 || 10.00 || || 10.00\n"
   );
 });

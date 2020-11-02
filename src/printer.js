@@ -9,7 +9,7 @@ class Printer {
       console.log(this._header);
     } else {
       let toPrint = this._header;
-      for (let i = 0; i < transactions.length; i++) {
+      for (let i = transactions.length - 1; i >= 0; i--) {
         const element = transactions[i];
         if (element.credit) {
           toPrint += element.date + " " + this._divider;
