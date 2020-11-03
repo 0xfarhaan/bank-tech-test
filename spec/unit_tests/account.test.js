@@ -27,3 +27,11 @@ test("records a debit transaction", () => {
     balance: -100,
   });
 });
+
+test("returns a list of empty transactions when called without any transactions", () => {
+  expect(account.returnTransactions()).toStrictEqual([]);
+});
+
+test("returns the default balance of zero when called without transactions", () => {
+  expect(account.returnBalance()).toStrictEqual(0);
+});
