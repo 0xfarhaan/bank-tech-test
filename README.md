@@ -5,7 +5,7 @@
 ## About
 This is a simple bank application that runs in the node REPL that allows a customer to deposit and withdraw money from a bank account alongside printing a statement in the REPL.
 
-## How to Run
+## Quickstart
 1. Clone this repo
 2. Navigate to the repo in your terminal
 3. Run the application and interact wth the bank
@@ -64,7 +64,23 @@ date || credit || debit || balance
 ```
 
 ## Planning:
-### functionality:
+
+### User Stories:
+```
+As a account holder
+I would like to make a deposit into my bank account
+```
+```
+As a account holder
+I would like to make a withdrawal into my bank account
+```
+```
+As a account holder
+I would like to get a bank statement
+that prints the most recent transaction first
+```
+
+### Functionality:
 * We need to store the date, credit, debit and balance for an account for a given day
 * Bank statement needs to be printed with a certain format as outlined above
 * User should be able to make a deposit - this stores the amount credited to the account and the date and a snapshot of the current balance
@@ -90,19 +106,4 @@ which is recording each transaction that will be printed in the statement (note 
 ```
 FILO principle: 
 [{date: value, credit: value, debit: value, balance: value}, {date: value, credit: value, debit: value, balance: value}]
-```
-
-### User Stories:
-```
-As a account holder
-I would like to make a deposit into my bank account
-```
-```
-As a account holder
-I would like to make a withdrawal into my bank account
-```
-```
-As a account holder
-I would like to get a bank statement
-that prints the most recent transaction first
 ```
