@@ -125,3 +125,6 @@ This section discusses improvements that can be made if more time was allocated.
 * Check for input type + error handling for invalid input
 * Don't let balances be withdrawn
 * Add confirmation messages for successful deposit or withdrawal
+
+### ULM Class Diagram
+<img src="./images/uml_class.png">
