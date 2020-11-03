@@ -1,6 +1,7 @@
 class Account {
   constructor() {
-    this.balance = 0;
+    this.DEFAULT_BALANCE = 0;
+    this.balance = this.DEFAULT_BALANCE;
     this.transactions = [];
   }
 
@@ -13,7 +14,9 @@ class Account {
   }
 
   transaction(amount) {
-    this.balance += amount;
+    amount = this._formatNumber(amount);
+    this.balance = parseInt(amount) + parseInt(this.balance);
+    this.balance = this._formatNumber(this.balance);
     if (amount > 0) {
       this.transactions.push({
         date: this._currentDate(),
@@ -26,7 +29,7 @@ class Account {
       this.transactions.push({
         date: this._currentDate(),
         balance: this.balance,
-        debit: Math.abs(amount),
+        debit: Math.abs(amount).toFixed(2),
       });
     }
   }
@@ -37,6 +40,10 @@ class Account {
       month: "numeric",
       day: "numeric",
     });
+  }
+
+  _formatNumber(amount) {
+    return amount.toFixed(2);
   }
 }
 module.exports = Account;

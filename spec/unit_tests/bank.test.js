@@ -33,13 +33,13 @@ test("expect an account with no transactions to return a empty statement", () =>
 
 test("user makes a deposit into their account", () => {
   bank.deposit(100);
-  account.returnBalance.mockImplementation(() => 100);
-  expect(bank._getBalance()).toBe(100);
+  account.returnBalance.mockImplementation(() => 100.0);
+  expect(bank._getBalance()).toBe(100.0);
 });
 
 test("user can make withdrawal from their account if it has money in it", () => {
   bank.deposit(100);
   bank.withdraw(50);
-  account.returnBalance.mockImplementation(() => 50);
-  expect(bank._getBalance()).toBe(50);
+  account.returnBalance.mockImplementation(() => 50.0);
+  expect(bank._getBalance()).toBe(50.0);
 });
