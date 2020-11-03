@@ -3,24 +3,24 @@ let Printer = require("./printer.js");
 
 class Bank {
   constructor(account = new Account(), printer = new Printer()) {
-    this.printer = printer;
-    this.account = account;
+    this._printer = printer;
+    this._account = account;
   }
 
   printStatement() {
-    this.printer.print(this.account.returnTransactions());
+    this._printer.print(this._account.returnTransactions());
   }
 
   deposit(amount) {
-    this.account.transaction(amount);
+    this._account.transaction(amount);
   }
 
   withdraw(amount) {
-    this.account.transaction(-amount);
+    this._account.transaction(-amount);
   }
 
   _getBalance() {
-    return this.account.returnBalance();
+    return this._account.returnBalance();
   }
 }
 module.exports = Bank;
