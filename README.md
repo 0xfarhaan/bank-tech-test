@@ -113,3 +113,15 @@ which is recording each transaction that will be printed in the statement (note 
 FILO principle: 
 [{date: value, credit: value, debit: value, balance: value}, {date: value, credit: value, debit: value, balance: value}]
 ```
+
+### Assumptions
+* Input will always be a numeric type
+* Account can be overdrawn 
+* Transactions can't be edited retrospectively 
+* No confirmation message for a successful deposit or withdrawal 
+
+### Improvements
+This section discusses improvements that can be made if more time was allocated.
+* Check for input type + error handling for invalid input
+* Don't let balances be withdrawn
+* Add confirmation messages for successful deposit or withdrawal

@@ -1,34 +1,34 @@
 class Account {
   constructor() {
-    this.DEFAULT_BALANCE = 0;
-    this.balance = this.DEFAULT_BALANCE;
-    this.transactions = [];
+    this._DEFAULT_BALANCE = 0;
+    this._balance = this._DEFAULT_BALANCE;
+    this._transactions = [];
   }
 
   returnTransactions() {
-    return this.transactions;
+    return this._transactions;
   }
 
   returnBalance() {
-    return this.balance;
+    return this._balance;
   }
 
   transaction(amount) {
     amount = this._formatNumber(amount);
-    this.balance = parseInt(amount) + parseInt(this.balance);
-    this.balance = this._formatNumber(this.balance);
+    this._balance = parseInt(amount) + parseInt(this._balance);
+    this._balance = this._formatNumber(this._balance);
     if (amount > 0) {
-      this.transactions.push({
+      this._transactions.push({
         date: this._currentDate(),
-        balance: this.balance,
+        balance: this._balance,
         credit: amount,
       });
     }
 
     if (amount < 0) {
-      this.transactions.push({
+      this._transactions.push({
         date: this._currentDate(),
-        balance: this.balance,
+        balance: this._balance,
         debit: Math.abs(amount).toFixed(2),
       });
     }
