@@ -17,15 +17,33 @@ class Printer {
     for (let i = transactions.length - 1; i >= 0; i--) {
       const element = transactions[i];
       if (element.credit) {
-        toPrint += element.date + " " + this._divider;
-        toPrint += " " + element.credit + " " + this._divider;
-        toPrint += " " + this._divider;
-        toPrint += " " + element.balance + "\n";
+        toPrint +=
+          element.date +
+          " " +
+          this._divider +
+          " " +
+          element.credit +
+          " " +
+          this._divider +
+          " " +
+          this._divider +
+          " " +
+          element.balance +
+          "\n";
       } else {
-        toPrint += element.date + " " + this._divider;
-        toPrint += " " + this._divider;
-        toPrint += " " + element.debit + " " + this._divider;
-        toPrint += " " + element.balance + "\n";
+        toPrint +=
+          element.date +
+          " " +
+          this._divider +
+          " " +
+          this._divider +
+          " " +
+          element.debit +
+          " " +
+          this._divider +
+          " " +
+          element.balance +
+          "\n";
       }
     }
     return toPrint;
