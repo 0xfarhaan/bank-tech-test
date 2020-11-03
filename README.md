@@ -6,6 +6,9 @@
 This is a simple bank application that runs in the node REPL that allows a customer to deposit and withdraw money from a bank account alongside printing a statement in the REPL.
 
 ## Quickstart
+
+Dependencies: Note you must have NPM and Node installed.
+
 1. Clone this repo
 2. Navigate to the repo in your terminal
 3. Run the application and interact wth the bank
