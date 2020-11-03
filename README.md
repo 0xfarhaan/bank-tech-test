@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.com/farhaan-ali/bank-tech-test.svg?branch=main)](https://travis-ci.com/farhaan-ali/bank-tech-test)
 
+## About
+This is a simple bank application that runs in the node REPL that allows a customer to deposit and withdraw money from a bank account alongside printing a statement in the REPL.
+
 ## How to Run
 1. Clone this repo
 2. Navigate to the repo in your terminal
