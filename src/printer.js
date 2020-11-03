@@ -5,7 +5,7 @@ class Printer {
   }
 
   print(transactions) {
-    if (transactions.length == 0) {
+    if (transactions.length === 0) {
       console.log(this._header);
     } else {
       console.log(this._addTransactions(transactions));

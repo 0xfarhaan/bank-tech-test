@@ -13,7 +13,7 @@ test("User can deposit money and see it on their statement", () => {
   console.log = jest.fn();
   bank.printStatement();
   expect(console.log).toHaveBeenCalledWith(
-    "date || credit || debit || balance\n02/11/2020 || 100 || || 100\n"
+    "date || credit || debit || balance\n02/11/2020 || 100.00 || || 100.00\n"
   );
 });
 
@@ -23,6 +23,6 @@ test("User can deposit and withdraw money and see it on their statement", () => 
   console.log = jest.fn();
   bank.printStatement();
   expect(console.log).toHaveBeenCalledWith(
-    "date || credit || debit || balance\n02/11/2020 || || 50 || 50\n02/11/2020 || 100 || || 100\n"
+    "date || credit || debit || balance\n02/11/2020 || || 50.00 || 50.00\n02/11/2020 || 100.00 || || 100.00\n"
   );
 });
