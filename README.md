@@ -27,6 +27,9 @@ bank.withdraw(INSERT_AN_AMOUNT)
 //print your statement from the bank
 bank.printStatement()
 ```
+### Screen Preview
+<img src="./images/demo.gif">
+
 ## Running Tests
 Navigate to the repo in your terminal
 ```bash
