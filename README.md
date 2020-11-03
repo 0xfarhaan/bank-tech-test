@@ -1,4 +1,4 @@
-# Bank tech test
+# Bank Tech Test
 
 [![Build Status](https://travis-ci.com/farhaan-ali/bank-tech-test.svg?branch=main)](https://travis-ci.com/farhaan-ali/bank-tech-test)
 
