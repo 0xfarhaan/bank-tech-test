@@ -71,7 +71,7 @@ date || credit || debit || balance
 
 ## Planning:
 
-### User Stories:
+### User Stories
 ```
 As a account holder
 I would like to make a deposit into my bank account
@@ -86,7 +86,7 @@ I would like to get a bank statement
 that prints the most recent transaction first
 ```
 
-### Functionality:
+### Functionality
 * We need to store the date, credit, debit and balance for an account for a given day
 * Bank statement needs to be printed with a certain format as outlined above
 * User should be able to make a deposit - this stores the amount credited to the account and the date and a snapshot of the current balance
