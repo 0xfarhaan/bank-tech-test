@@ -28,10 +28,10 @@ test("expect an account with no transactions to return a empty statement", () =>
 
 test("user makes a deposit into their account", () => {
   bank.deposit(100);
-  expect(bank._account.transaction).toHaveBeenCalled();
+  expect(account.transaction).toHaveBeenCalled();
 });
 
 test("user can make withdrawal from their account", () => {
   bank.withdraw(50);
-  expect(bank._account.transaction).toHaveBeenCalled();
+  expect(account.transaction).toHaveBeenCalled();
 });

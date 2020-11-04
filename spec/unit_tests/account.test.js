@@ -12,7 +12,8 @@ beforeEach(() => {
 
 test("records a credit transaction", () => {
   account.transaction(100);
-  expect(account._transactions[0]).toStrictEqual({
+  let transactions = account.returnTransactions();
+  expect(transactions[0]).toStrictEqual({
     date: "02/11/2020",
     credit: "100.00",
     balance: "100.00",
@@ -21,8 +22,8 @@ test("records a credit transaction", () => {
 
 test("records a debit transaction", () => {
   account.transaction(-100);
-  console.log(account._transactions)
-  expect(account._transactions[0]).toStrictEqual({
+  let transactions = account.returnTransactions();
+  expect(transactions[0]).toStrictEqual({
     date: "02/11/2020",
     debit: "100.00",
     balance: "-100.00",
