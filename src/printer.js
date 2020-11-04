@@ -5,14 +5,10 @@ class Printer {
   }
 
   print(transactions) {
-    if (transactions.length === 0) {
-      console.log(this._header);
-    } else {
-      console.log(this._addTransactions(transactions));
-    }
+    console.log(this._formatTransactions(transactions));
   }
 
-  _addTransactions(transactions) {
+  _formatTransactions(transactions) {
     let toPrint = this._header;
     for (let i = transactions.length - 1; i >= 0; i--) {
       const element = transactions[i];
