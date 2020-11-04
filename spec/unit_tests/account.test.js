@@ -12,25 +12,20 @@ beforeEach(() => {
 
 test("records a credit transaction", () => {
   account.transaction(100);
-  let amount = 100;
-  amount = amount.toFixed(2);
   expect(account._transactions[0]).toStrictEqual({
     date: "02/11/2020",
-    credit: amount,
-    balance: amount,
+    credit: "100.00",
+    balance: "100.00",
   });
 });
 
 test("records a debit transaction", () => {
   account.transaction(-100);
-  let debit = 100;
-  debit = debit.toFixed(2);
-  let balance = -100;
-  balance = balance.toFixed(2);
+  console.log(account._transactions)
   expect(account._transactions[0]).toStrictEqual({
     date: "02/11/2020",
-    debit: debit,
-    balance: balance,
+    debit: "100.00",
+    balance: "-100.00",
   });
 });
 
