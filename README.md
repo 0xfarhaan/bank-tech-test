@@ -1,6 +1,8 @@
 # Bank Tech Test
 
 [![Build Status](https://travis-ci.com/farhaan-ali/bank-tech-test.svg?branch=main)](https://travis-ci.com/farhaan-ali/bank-tech-test)
+[![Maintainability](https://api.codeclimate.com/v1/badges/92e9f1f2b716e727e1fc/maintainability)](https://codeclimate.com/github/farhaan-ali/bank-tech-test/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/92e9f1f2b716e727e1fc/test_coverage)](https://codeclimate.com/github/farhaan-ali/bank-tech-test/test_coverage)
 
 ## About
 This is a simple bank application that runs in the node REPL that allows a customer to deposit and withdraw money from a bank account alongside printing a statement in the REPL.
