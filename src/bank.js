@@ -18,9 +18,5 @@ class Bank {
   withdraw(amount) {
     this._account.transaction(-amount);
   }
-
-  _getBalance() {
-    return this._account.returnBalance();
-  }
 }
 module.exports = Bank;

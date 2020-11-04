@@ -15,11 +15,6 @@ beforeEach(() => {
   bank = new Bank(account, printer);
 });
 
-test("expects account balance to start at zero", () => {
-  account.returnBalance.mockImplementation(() => 0);
-  expect(bank._getBalance()).toStrictEqual(0);
-});
-
 test("expect an account with no transactions to return a empty statement", () => {
   console.log = jest.fn();
   printer.print.mockImplementation(() =>
@@ -33,13 +28,10 @@ test("expect an account with no transactions to return a empty statement", () =>
 
 test("user makes a deposit into their account", () => {
   bank.deposit(100);
-  account.returnBalance.mockImplementation(() => 100.0);
-  expect(bank._getBalance()).toBe(100.0);
+  expect(bank._account.transaction).toHaveBeenCalled();
 });
 
-test("user can make withdrawal from their account if it has money in it", () => {
-  bank.deposit(100);
+test("user can make withdrawal from their account", () => {
   bank.withdraw(50);
-  account.returnBalance.mockImplementation(() => 50.0);
-  expect(bank._getBalance()).toBe(50.0);
+  expect(bank._account.transaction).toHaveBeenCalled();
 });
